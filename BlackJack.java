@@ -10,5 +10,6 @@ public class BlackJack{
 		if(help == 9){
 			blackjackManual();
 		}
+		
 	}
 }
