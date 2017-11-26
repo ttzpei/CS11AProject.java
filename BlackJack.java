@@ -5,6 +5,7 @@ public class BlackJack{
 		Scanner scanner = new Scanner(System.in);
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
+		//if you have time, make this whole loop a method.
 		do{
 			System.out.println("Welcome to BlackJack");
 			System.out.println("If you need any help, press '9' now.");
