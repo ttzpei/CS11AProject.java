@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class BlackJack{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
+		Random random = new Random();
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
@@ -16,8 +18,9 @@ public class BlackJack{
 			}
 			int computer = computerValue(); //generate random computer card values.
 			System.out.println("Alright! Here are your first two cards.");
-			String result = generateCard1(); //generate first cards in a method
-			System.out.printf("%s%n",result);
+			String result = generateCard1(Cards); //generate first cards in a method
+			String result2 = generateCard1(Cards);
+			System.out.printf("%s %s%n",result, result2);
 			int sum = cardValue(result); //get the numeric value based on the card in a method
 			System.out.println("Do you want to hit, stand, or switch ace?");
 			String choice = scanner.nextLine();
