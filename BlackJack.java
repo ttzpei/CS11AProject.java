@@ -10,6 +10,8 @@ public class BlackJack{
 		if(help == 9){
 			blackjackManual();
 		}
+		System.out.println("Alright! Here are your first two cards.");
+		generateCard1();
 		
 	}
 }
