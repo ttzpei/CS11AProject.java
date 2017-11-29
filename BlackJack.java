@@ -16,7 +16,7 @@ public class BlackJack{
 			if(help == 9){
 				blackjackManual(); //done
 			}
-			int computer = computerValue(); //generate random computer card values.
+			String computer = computerValue(); //generate random computer card values.
 			System.out.println("Alright! Here are your first two cards.");
 			String result = generateCard1(Cards); //generate first cards in a method
 			String result2 = generateCard1(Cards);
@@ -28,7 +28,7 @@ public class BlackJack{
 			if(sum==21 || sum-computer>0){
 				System.out.println("Congrats! You win!");
 			}else{
-				System.out.println("The computer won with a hand value of %d",computer);
+				System.out.println("The computer won with a hand value of %s",computer);
 			}
 			System.out.println("Do you want to try again?");
 			System.out.println("If so enter a number other than 0");
