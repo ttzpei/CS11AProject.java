@@ -8,6 +8,7 @@ public class BlackJack{
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		int end2 = 0;
+		int end3 = 0;
 		//if you have time, make this whole loop a method.
 		do{
 			System.out.println("Welcome to BlackJack");
