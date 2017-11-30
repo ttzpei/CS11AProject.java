@@ -7,6 +7,7 @@ public class BlackJack{
 		Random random = new Random();
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
+		int end2 = 5;
 		//if you have time, make this whole loop a method.
 		do{
 			System.out.println("Welcome to BlackJack");
