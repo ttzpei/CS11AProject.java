@@ -30,7 +30,7 @@ public class BlackJack{
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
 			}else{
-				System.out.println("The computer won with a hand value of %s",computer);
+				System.out.println("The computer won with a hand value of " + computer + " and " + computer2);
 			}
 			System.out.println("Do you want to try again?");
 			System.out.println("If so enter a number other than 0");
