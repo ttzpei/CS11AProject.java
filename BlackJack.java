@@ -16,16 +16,18 @@ public class BlackJack{
 			if(help == 9){
 				blackjackManual(); //done
 			}
-			String computer = computerValue(); //generate random computer card values.
+			String computer = generateCard1(Cards); //generate random computer card values.
+			String computer2 = generateCard1(Cards);
+			int computerValue = cardValue(computer, computer2);
 			System.out.println("Alright! Here are your first two cards.");
 			String result = generateCard1(Cards); //generate first cards in a method
 			String result2 = generateCard1(Cards);
-			System.out.printf("%s %s%n",result, result2);
-			int sum = cardValue(result); //get the numeric value based on the card in a method
-			System.out.println("Do you want to hit, stand, or switch ace?");
+			System.out.printf("%s%n%s%n",result, result2);
+			int sum = cardValue(result, result2); //get the numeric value based on the card in a method; partway done0
+			System.out.println("Do you want to hit, stand, or switch?");
 			String choice = scanner.nextLine();
 			sum = userOption(choice); //change the sum based on the use choice in a method
-			if(sum==21 || sum-computer>0){
+			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
 			}else{
 				System.out.println("The computer won with a hand value of %s",computer);
