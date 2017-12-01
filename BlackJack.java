@@ -5,7 +5,7 @@ public class BlackJack{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
-		String[][] Cards = new String[7][8];
+		String[][] Cards = new String[4][13];
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
@@ -23,7 +23,7 @@ public class BlackJack{
 			double bet = scanner.nextDouble(); scanner.nextLine();
 			String computer = generateCard1(Cards); //generate random computer card values.
 			String computer2 = generateCard1(Cards);
-			int computerValue = cardValue(computer, computer2);
+			int computerValue = cardValue(computer, computer2); // use string split
 			System.out.println("Alright! Here are your first two cards.");
 			String result = generateCard1(Cards); //generate first cards in a method
 			String result2 = generateCard1(Cards);
