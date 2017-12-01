@@ -36,7 +36,9 @@ public class BlackJack{
 				System.out.println("Congrats! You win!");
 				System.out.println
 				bettingPool += bet;
-			}else{
+			} else if (sum==computerValue){
+				System.out.println("You have a tie!");
+			} else{
 				System.out.println("The computer won with a hand value of " + computer + " and " + computer2);
 				bettingPool -= bet;
 			}
