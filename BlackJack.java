@@ -6,6 +6,7 @@ public class BlackJack{
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		String[][] Cards = new String[4][13];
+		// for the cardList method make the first part of the string array be the number value and the second the suit
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
