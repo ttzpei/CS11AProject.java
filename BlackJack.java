@@ -5,6 +5,7 @@ public class BlackJack{
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
+		String[][] Cards = new String[7][8];
 		String[][] Cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
@@ -16,7 +17,10 @@ public class BlackJack{
 			if(help == 9){
 				blackjackManual(); //done
 			}
-			int bettingPool = scanner.nextInt(); scanner.nextLine();
+			System.out.println("Please enter your total betting pool.");
+			double bettingPool = scanner.nextDouble(); scanner.nextLine();
+			System.out.println("Alright, how much do you want to bet for this round?");
+			double bet = scanner.nextDouble(); scanner.nextLine();
 			String computer = generateCard1(Cards); //generate random computer card values.
 			String computer2 = generateCard1(Cards);
 			int computerValue = cardValue(computer, computer2);
@@ -30,8 +34,11 @@ public class BlackJack{
 			sum = userOption(choice); //change the sum based on the use choice in a method
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
+				System.out.println
+				bettingPool += bet;
 			}else{
 				System.out.println("The computer won with a hand value of " + computer + " and " + computer2);
+				bettingPool -= bet;
 			}
 			System.out.println("Do you want to try again?");
 			System.out.println("If so enter a number other than 0");
