@@ -34,8 +34,8 @@ public class BlackJack{
 			sum = userOption(choice); //change the sum based on the use choice in a method
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
-				System.out.println
 				bettingPool += bet;
+				System.out.println("Your total betting pool is" + bettingPool);
 			}else{
 				System.out.println("The computer won with a hand value of " + computer + " and " + computer2);
 				bettingPool -= bet;
