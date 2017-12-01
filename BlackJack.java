@@ -21,14 +21,14 @@ public class BlackJack{
 			double bettingPool = scanner.nextDouble(); scanner.nextLine();
 			System.out.println("Alright, how much do you want to bet for this round?");
 			double bet = scanner.nextDouble(); scanner.nextLine();
-			String computer = generateCard1(Cards); //generate random computer card values.
+			String computer = generateCard1(Cards); //generate random computer card values. Done
 			String computer2 = generateCard1(Cards);
 			int computerValue = cardValue(computer, computer2); // use string split
 			System.out.println("Alright! Here are your first two cards.");
 			String result = generateCard1(Cards); //generate first cards in a method
 			String result2 = generateCard1(Cards);
 			System.out.printf("%s%n%s%n",result, result2);
-			int sum = cardValue(result, result2); //get the numeric value based on the card in a method; partway done0
+			double sum = cardValue(result, result2); //get the numeric value based on the card in a method; partway done0
 			System.out.println("Do you want to hit, stand, or switch?");
 			String choice = scanner.nextLine();
 			sum = userOption(choice); //change the sum based on the use choice in a method

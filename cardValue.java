@@ -1,4 +1,4 @@
-public static int cardValue(String first, String second){
+public static double cardValue(String first, String second){
   String[] split = first.split(" ");
 
   String[] split = second.split(" ");
