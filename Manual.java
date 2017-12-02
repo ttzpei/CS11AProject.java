@@ -1,5 +1,9 @@
+/**
+This method prints out the instruction manual when it is called on.
+*/
+
 public static void Manual{
-  System.out.println(General BlackJack Manual for Dummies:
+  System.out.println("General BlackJack Manual for Dummies:");
 
   System.out.println("The goal of this game is to beat the dealer by making your hand closer to 21 than the dealer's without going over 21.");
   System.out.println("Each player will be dealt two cards to start. Each card has a value between 1-11: numbered cards equal their face value");

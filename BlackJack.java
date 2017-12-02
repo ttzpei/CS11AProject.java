@@ -2,6 +2,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class BlackJack{
+
+	/**
+	@param args 
+	*/
+
 	public static void main(String[] args){
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
@@ -47,6 +52,6 @@ public class BlackJack{
 			System.out.println("Do you want to try again?");
 			System.out.println("If so enter a number other than 0");
 			end = scanner.getInt(); scanner.getLine();
-		}while(end==0);
+		}while(end == 0);
 	}
 }
