@@ -44,11 +44,14 @@ public class BlackJackTest{
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
 				System.out.println("The computer lost with a hand of " + computer + " and " + computer2);
+				System.out.println("User: " + sum + " Computer: " + computerValue);
 				bettingPool += bet;
 			} else if (sum==computerValue){
 				System.out.println("You have a tie!");
+				System.out.println("User: " + sum + " Computer: " + computerValue);
 			}else{
 				System.out.println("The computer won with a hand value of " + computer + " and " + computer2);
+				System.out.println("User: " + sum + " Computer: " + computerValue);
 				bettingPool -= bet;
 			}
 			System.out.println("Do you want to try again?");
@@ -259,6 +262,7 @@ public static int userOption(String choice, int sum, String[][] cards, String ca
       return sum;
     }
   }else{
+		System.out.println("Invalid input; Default to stand.");
     return sum;
   }
 }
