@@ -4,7 +4,7 @@ import java.util.Random;
 public class BlackJack{
 
 	/**
-	@param args 
+	@param args
 	*/
 
 	public static void main(String[] args){
@@ -37,7 +37,7 @@ public class BlackJack{
 			double sum = cardValue(result, result2); //get the numeric value based on the card in a method; partway done0
 			System.out.println("Do you want to hit, stand, or switch?");
 			String choice = scanner.nextLine();
-			sum = userOption(choice); //change the sum based on the use choice in a method
+			sum = userOption(choice, sum, Cards, result, result2); //change the sum based on the use choice in a method
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
 				bettingPool += bet;
