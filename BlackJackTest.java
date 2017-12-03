@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.lang.Integer;
 
 public class BlackJackTest{
 
@@ -11,7 +12,6 @@ public class BlackJackTest{
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		// for the cardList method make the first part of the string array be the number value and the second the suit
-		String[][] cards = new String[4][13];
 		String[][] cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
@@ -61,20 +61,19 @@ This program creates the cards we plan to use in a 2D array.
 @return It returns the whole 2D array with all the spots filled out by cards.
 */
 public static String[][] cardList(){
-  String[][] cards = new String [4][13];
-  for(int i = 0; i < 4; i++){
-    for(int k = 0; i < 13; i++){
+	String[][] cards = new String[4][13];
+  for(int i = 0; i <= 3; i++){
+    for(int k = 0; k <= 12; k++){
       if(k == 0){
-        cards[i][k] += "Ace";
-      }
-      if(k > 0 && k <= 9){
-        cards[i][k] += String.valueOf(k+1);
+        cards[i][k] = "Ace";
+      }else if(k > 0 && k <= 9){
+        cards[i][k] = String.valueOf(k+1);
       }else if(k == 10){
-        cards[i][k] += "Jack";
+        cards[i][k] = "Jack";
       }else if(k == 11){
-        cards[i][k] += "Queen";
+        cards[i][k] = "Queen";
       }else if(k == 12){
-        cards[i][k] += "King";
+        cards[i][k] = "King";
       }
       if(i == 0){
         cards[i][k] += " Clover ";
@@ -210,7 +209,9 @@ This method prints out the instruction manual when it is called on.
 */
 
 public static void blackjackManual(){
+	System.out.println();
   System.out.println("General BlackJack Manual for Dummies:");
+	System.out.println();
   System.out.println("The goal of this game is to beat the dealer by making your hand closer to 21 than the dealer's without going over 21.");
   System.out.println("Each player will be dealt two cards to start. Each card has a value between 1-11: numbered cards equal their face value");
   System.out.println("i.e. 2 of hearts=2 and 7 of diamonds equals 7, face cards (Jack, Queen, King) are valued at 10, and an ace is valued at");
@@ -218,15 +219,14 @@ public static void blackjackManual(){
   System.out.println("A hand's value is the sum of all their cards. If your hand is valued higher than the dealer's and equal to or below 21");
   System.out.println("you win. If your hand is lower than the dealer's or exceeds 21 you lose.");
   System.out.println();
-  System.out.println("Help Option:");
-  System.out.println();
   System.out.println("Once dealt two cards you will be given the option to Hit, Stand, or Switch Ace:");
-  System.out.println("  If your hand is below 21 and you would like to increase the value of your hand, you may choose to 'Hit'; this will signal");
+  System.out.println("If your hand is below 21 and you would like to increase the value of your hand, you may choose to 'Hit'; this will signal");
   System.out.println("the dealer to deal you an additional card. You may continue to 'Hit' as long as your cards value are less than 21.");
-  System.out.println("  If you believe your hand is higher than the dealer's, you may choose to 'Stand'; this will signal the end of your turn");
+  System.out.println("If you believe your hand is higher than the dealer's, you may choose to 'Stand'; this will signal the end of your turn");
   System.out.println("and the value of your cards will remain the same.");
-  System.out.println("  If you have been dealt an Ace, you will have the option to 'Switch Ace'; this will change the value of your ace from 1 to");
+  System.out.println("If you have been dealt an Ace, you will have the option to 'Switch Ace'; this will change the value of your ace from 1 to");
   System.out.println("11 or from 11 to 1 depending of the current value of your ace.");
+	System.out.println();
 }
 
 /**

@@ -14,10 +14,10 @@ public static void Manual(){
   System.out.println("Help Option:");
   System.out.println();
   System.out.println("Once dealt two cards you will be given the option to Hit, Stand, or Switch Ace:");
-  System.out.println("  If your hand is below 21 and you would like to increase the value of your hand, you may choose to 'Hit'; this will signal");
+  System.out.println("If your hand is below 21 and you would like to increase the value of your hand, you may choose to 'Hit'; this will signal");
   System.out.println("the dealer to deal you an additional card. You may continue to 'Hit' as long as your cards value are less than 21.");
-  System.out.println("  If you believe your hand is higher than the dealer's, you may choose to 'Stand'; this will signal the end of your turn");
+  System.out.println("If you believe your hand is higher than the dealer's, you may choose to 'Stand'; this will signal the end of your turn");
   System.out.println("and the value of your cards will remain the same.");
-  System.out.println("  If you have been dealt an Ace, you will have the option to 'Switch Ace'; this will change the value of your ace from 1 to");
+  System.out.println("If you have been dealt an Ace, you will have the option to 'Switch Ace'; this will change the value of your ace from 1 to");
   System.out.println("11 or from 11 to 1 depending of the current value of your ace.");
 }
