@@ -10,9 +10,11 @@ public static int cardValue(String first, String second){
   int second = 0;
   int sum;
 
-  if(!split[0].equals("King") && !split[0].equals("Queen") && !split[0].equals("Jack")){
+  if(split[0].equals("Ace")){
+    first = 1;
+  }else if(!split[0].equals("King") && !split[0].equals("Queen") && !split[0].equals("Jack")){
     int result = Integer.parseInt(split[0]);
-    for(int i = 1; i < 10; i++){
+    for(int i = 2; i < 10; i++){
       if(i == result){
         first = i;
       }
@@ -24,7 +26,9 @@ public static int cardValue(String first, String second){
   int uno = 0;
   int dos = 0;
 
-  if(!split2[0].equals("King") && !split2[0].equals("Queen") && !split2[0].equals("Jack")){
+  if(split2[0].equals("Ace")){
+    second = 1;
+  }else if(!split2[0].equals("King") && !split2[0].equals("Queen") && !split2[0].equals("Jack")){
     int result2 = Integer.parseInt(split2[0]);
     for(int j = 1; j < 10; j++){
       if(j == result2){

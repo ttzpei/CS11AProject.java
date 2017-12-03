@@ -6,7 +6,10 @@ public static String cardList(){
   String[][] Cards = new String [4][13];
   for(int i = 0; i < 4; i++){
     for(int k = 0; i < 13; i++){
-      if(k >= 0 && k <= 9){
+      if(k = 0){
+        String[i][k] += "Ace";
+      }
+      if(k > 0 && k <= 9){
         String[i][k] += String.valueOf(k+1);
       }else if(k == 10){
         String[i][k] += "Jack";

@@ -16,7 +16,12 @@ public static int userOption(String choice, int sum, String[][] cards, String ca
   }else if(choice == "stand"){
     return sum;
   }else if (choice == "switch"){
-    
+    if(card1.equals("Ace") || card2.equals("Ace")){
+      sum += 10;
+      return sum;
+    }else{
+      return sum;
+    }
   }else{
     System.out.println("You picked none.");
   }
