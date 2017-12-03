@@ -15,16 +15,16 @@ public class BlackJackTest{
 		String[][] cards = cardList(); //please make the method for the array of all cards
 		int end = 0;
 		//if you have time, make this whole loop a method.
+		System.out.println("Welcome to BlackJack");
+		System.out.println("If you need any help, press '9' now.");
+		System.out.println("If not press 0.");
+		int help = scanner.nextInt(); scanner.nextLine();
+		if(help == 9){
+			blackjackManual(); //done
+		}
+		System.out.println("Please enter your total betting pool.");
+		double bettingPool = scanner.nextDouble(); scanner.nextLine();
 		do{
-			System.out.println("Welcome to BlackJack");
-			System.out.println("If you need any help, press '9' now.");
-			System.out.println("If not press 0.");
-			int help = scanner.nextInt(); scanner.nextLine();
-			if(help == 9){
-				blackjackManual(); //done
-			}
-			System.out.println("Please enter your total betting pool.");
-			double bettingPool = scanner.nextDouble(); scanner.nextLine();
 			System.out.println("Alright, how much do you want to bet for this round?");
 			double bet = scanner.nextDouble(); scanner.nextLine();
 			String computer = generateCard1(cards); //generate random computer card values. Done
@@ -51,9 +51,11 @@ public class BlackJackTest{
 				bettingPool -= bet;
 			}
 			System.out.println("Do you want to try again?");
-			System.out.println("If so enter a number other than 0");
+			System.out.println("If so enter '0'.");
 			end = scanner.nextInt(); scanner.nextLine();
 		}while(end == 0);
+		System.out.println();
+		System.out.println("You have a total of " + bettingPool + " in remaining earnings.");
 	}
 
 /**
