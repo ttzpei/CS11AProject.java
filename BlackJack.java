@@ -4,7 +4,7 @@ import java.util.Random;
 public class BlackJack{
 
 	/**
-	@param args
+	@param args arguments 
 	*/
 
 	public static void main(String[] args){

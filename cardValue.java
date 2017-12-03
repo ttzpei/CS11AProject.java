@@ -9,7 +9,6 @@ public static int cardValue(String first, String second){
   int first = 0;
   int second = 0;
   int sum;
-
   if(split[0].equals("Ace")){
     first = 1;
   }else if(!split[0].equals("King") && !split[0].equals("Queen") && !split[0].equals("Jack")){
@@ -38,7 +37,6 @@ public static int cardValue(String first, String second){
   }else{
     second = 10;
   }
-
   sum = first+second;
   return sum;
 
