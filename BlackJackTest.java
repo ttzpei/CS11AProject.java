@@ -43,6 +43,7 @@ public class BlackJackTest{
 			}
 			if(sum==21 || sum-computerValue>0){
 				System.out.println("Congrats! You win!");
+				System.out.println("The computer lost with a hand of " + computer + " and " + computer2);
 				bettingPool += bet;
 			} else if (sum==computerValue){
 				System.out.println("You have a tie!");
@@ -244,8 +245,10 @@ Then it returns a value based on the user input.
 public static int userOption(String choice, int sum, String[][] cards, String card1, String card2){
   if(choice.equals("hit")){
     String k = generateCard2(cards, card1, card2);
+		System.out.println("You got hit with a " + k);
     int j = cardValue2(k);
-    return j;
+		sum += j;
+    return sum;
   }else if(choice.equals("stand")){
     return sum;
   }else if (choice.equals("switch")){
