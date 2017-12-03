@@ -5,7 +5,7 @@ import java.lang.Integer;
 public class BlackJackTest{
 
 	/**
-	@param args an Array of strings that we ignore
+	@param args An array of strings that we ignore
 	*/
 
 	public static void main(String[] args){
