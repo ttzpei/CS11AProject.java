@@ -70,7 +70,7 @@ public class CardValue{
   }
 
   /**
-  This method evaluates the value of the cards that the user has on hand.
+  This method evaluates the value of the cards that the user gets hit with
   @param first This is the first card the user inputs
   @return This is the total values of the two cards that the user inputs
   */
