@@ -41,15 +41,8 @@ public class BlackJackTest3{
 				System.out.println("You had no aces to switch. Default to stand.");
 			}
 			if(sum > 21){
-				if((sum-21)==(21-computerValue)) {
-					Text.tieCondition(sum, computerValue, computer, computer2);
-				}else if((sum-21)<(21-computerValue)){
-					Text.winCondition(bettingPool, bet, computer, computer2, sum, computerValue);
-					bettingPool += bet;
-				}else{
 					Text.loseCondition(bettingPool, bet, computer, computer2, sum, computerValue);
 					bettingPool -= bet;
-				}
 			}else if(sum==21 || sum-computerValue>0){
 				Text.winCondition(bettingPool, bet, computer, computer2, sum, computerValue);
 				bettingPool += bet;
